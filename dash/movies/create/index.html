@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link rel="stylesheet" href="../main.css" />
+    <title>Dashboard - Inicio</title>
+  </head>
+  <body>
+    <section class="min-h-screen bg-gray-50">
+      <nav
+        class="fixed top-0 left-0 z-20 h-full pb-10 overflow-x-hidden overflow-y-auto transition origin-left transform bg-white border-r w-60 md:translate-x-0"
+      >
+        <a href="/" class="flex items-center px-4 py-5">
+          <img src="../../../assets/logo-cinnema.svg" class="w-20" />
+        </a>
+        <nav class="text-sm font-medium text-gray-600">
+          <a
+            class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+            href="#"
+          >
+            <svg
+              class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+              />
+            </svg>
+            <span>Vendas</span>
+          </a>
+
+          <a
+            class="flex items-center px-4 py-3 text-gray-900 transition bg-gray-100 cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+            href="#"
+          >
+            <svg
+              class="shrink-0 w-5 h-5 mr-2 text-gray-600 transition group-hover:text-gray-600"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"
+              />
+            </svg>
+            <span>Filmes</span>
+          </a>
+
+          <a
+            class="flex items-center px-4 py-3 transition cursor-pointer group hover:bg-gray-100 hover:text-gray-900"
+            href="#"
+          >
+            <svg
+              class="shrink-0 w-5 h-5 mr-2 text-gray-400 transition group-hover:text-gray-600"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span>Configuração</span>
+          </a>
+        </nav>
+      </nav>
+      <div class="ml-0 transition md:ml-60">
+        <header
+          class="flex items-center justify-between w-full px-4 bg-white border-b h-14"
+        >
+          <button
+            class="block btn btn-light md:hidden"
+            @click.stop="sideBar = true"
+          >
+            <span class="sr-only">Menu</span>
+            <svg
+              class="w-4 h-4"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+
+          <div class="flex items-center">
+            <a
+              href="#"
+              class="w-8 h-8 ml-auto mr-2 select-none draggable-none rounded-full ring-2 ring-indigo-400 cursor-pointer"
+            >
+              <img src="../../../assets/icons/login.png" />
+            </a>
+          </div>
+        </header>
+        <div class="p-4">
+          <!-- Área de conteúdo -->
+          <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <div class="p-4">
+              <div class="relative mt-1">Criar filme</div>
+              <form>
+                <div class="my-6">
+                  <label
+                    for="nome"
+                    class="block mb-2 text-sm font-medium text-gray-900"
+                    >Nome do filme</label
+                  >
+                  <input
+                    type="text"
+                    id="nome"
+                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5"
+                    required
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="sinopse"
+                    class="block mb-2 text-sm font-medium text-gray-900"
+                    >Sinopse</label
+                  >
+                  <input
+                    type="text"
+                    id="sinopse"
+                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5"
+                    required
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="imagem-url"
+                    class="block mb-2 text-sm font-medium text-gray-900"
+                    >URL da imagem</label
+                  >
+                  <input
+                    type="url"
+                    id="imagem-url"
+                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5"
+                    required
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="classification"
+                    class="block mb-2 text-sm font-medium text-gray-900"
+                    >Classificação Indicativa</label
+                  >
+
+                  <select
+                    id="classification"
+                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5"
+                  >
+                    <option value="L">Livre</option>
+                    <option value="10">10+</option>
+                    <option value="12">12+</option>
+                    <option value="14">14+</option>
+                    <option value="16">16+</option>
+                    <option value="18">18+</option>
+                  </select>
+                </div>
+                <div class="flex items-start mb-6">
+                  <div class="flex items-center h-5">
+                    <input
+                      id="legendado"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-indigo-300"
+                      required
+                    />
+                  </div>
+                  <label
+                    for="legendado"
+                    class="ml-2 text-sm font-medium text-gray-900"
+                    >Legendado</label
+                  >
+                </div>
+                <div class="flex items-start mb-6">
+                  <div class="flex items-center h-5">
+                    <input
+                      id="3d"
+                      type="checkbox"
+                      value=""
+                      class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-indigo-300"
+                      required
+                    />
+                  </div>
+                  <label for="3d" class="ml-2 text-sm font-medium text-gray-900"
+                    >3D</label
+                  >
+                </div>
+                <button
+                  type="submit"
+                  class="text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                >
+                  Criar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

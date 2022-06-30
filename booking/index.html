@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../main.css" />
+    <title>CinneMa - Início</title>
+  </head>
+  <body>
+    <header>
+      <!-- Top header bar -->
+      <nav class="h-12 w-full flex items-center justify-center">
+        <img
+          src="../assets/logo-cinnema.svg"
+          alt="Cinnema pagina inicial"
+          class="h-5 ml-auto draggable-none select-none"
+        />
+
+        <img
+          class="w-9 h-9 ml-auto mr-2 select-none draggable-none rounded-full ring-2 ring-indigo-400 cursor-pointer"
+          src="../assets/icons/login.png"
+          alt="Entre para comprar"
+          onclick="location.href = './auth';"
+        />
+      </nav>
+
+      <!-- Filme em destaque -->
+      <main id="filme-em-cartaz absolute" class="w-full min-w-full">
+        <img
+          class="h-52 w-full rounded-b-3xl object-cover shadow-xl md:h-96 lg:h-[42rem]"
+          src="https://mixdeseries.com.br/wp-content/uploads/2021/05/Cruella-Gratis-Disney-Plus-1024x576-1.png"
+          alt="Filme"
+        />
+        <div class="absolute top-40 pl-6 md:top-72 lg:top-[35rem]">
+          <div class="flex gap-1 pt-4">
+            <div
+              class="w-min rounded-lg bg-green-500 p-1 pl-3 pr-3 leading-none"
+            >
+              <span class="text-xs font-bold text-white">L</span>
+            </div>
+            <div
+              class="w-min rounded-lg bg-indigo-500 p-1 pl-2 pr-2 leading-none"
+            >
+              <span class="text-xs font-semibold text-white">Dublado</span>
+            </div>
+            <div
+              class="w-min rounded-lg border-r-2 border-b-4 border-purple-800 bg-purple-600 p-1 pl-2 pr-2 leading-none"
+            >
+              <span class="text-xs font-semibold text-white">3D</span>
+            </div>
+          </div>
+          <span
+            class="text-4xl font-bold text-white [text-shadow:0_4px_8px_rgba(0,0,0,0.8)] leading-10 md:text-7xl"
+            >Nome do filme à ser comprado</span
+          >
+        </div>
+      </main>
+    </header>
+    <br />
+
+    <!-- Todos os filmes em cartaz -->
+    <section class="mx-5">
+      <label
+        for="date"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+        >Selecione a data...</label
+      >
+      <select
+        id="date"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4"
+      >
+        <option value="{date}">data</option>
+      </select>
+
+      <label
+        for="hour"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+        >Selecione o melhor horário</label
+      >
+      <select
+        id="hour"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4"
+      >
+        <option value="{numero-horario}">numero-horario</option>
+      </select>
+
+      <label
+        for="chair"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+        >Nos diga também onde você quer sentar!</label
+      >
+      <select
+        id="chair"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4"
+      >
+        <option value="{cadeira}">cadeira1</option>
+      </select>
+
+      <label
+        for="tipo-entrada"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+        >Tipo de entrada</label
+      >
+      <select
+        id="tipo-entrada"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4"
+      >
+        <option value="inteira-entrada">Entrada Inteira</option>
+        <option value="meia-entrada">Meia entrada</option>
+      </select>
+
+      <label
+        for="metodo-pagamento"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+        >Método de pagamento</label
+      >
+      <select
+        id="metodo-pagamento"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-4"
+      >
+        <option value="dinheiro">Dinheiro</option>
+        <option value="cartao">Cartão de débito/crédito</option>
+        <option value="pix">Pix</option>
+      </select>
+
+      <div class="flex flex-row justify-between w-1/4 pb-8">
+        <span class="text-xl font-bold text-indigo-400">Total: R$ xx,xx</span>
+        <button
+          type="submit"
+          class="text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+        >
+          Reservar
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
